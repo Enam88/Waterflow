@@ -31,7 +31,7 @@ This project showcases the implementation of MLOps practices using MLflow. The r
 ├── test_experiment_xgb.py
 ├── test_mlops_rf.py
 
-```
+
 
 ```
 
