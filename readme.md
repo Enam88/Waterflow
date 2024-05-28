@@ -7,7 +7,6 @@
 This project showcases the implementation of MLOps practices using MLflow. The repository contains scripts for exploratory data analysis, machine learning experiments with various models, and model deployment.
 
 ## Project Structure
-```
 .
 ├── .dvc/
 ├── Waterflow/
@@ -66,6 +65,7 @@ The repository includes several scripts for running machine learning experiments
 - `experiment_xgb.py`: Experiment with an XGBoost model.
 
 To run an experiment, use the following command:
+
 ```sh
 
 python <script_name>.py
@@ -79,6 +79,7 @@ Test scripts for the experiments are included:
 - `test_mlops_rf.py`
 
 To run the tests, use the following command:
+
 ```sh
 
 python <test_script_name>.py
