@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Water Quality Prediction</h1>
+        <form id="predictionForm" method="post" action="/predict">
+            <div class="form-group">
+                <label for="ph">pH</label>
+                <input type="number" step="0.01" class="form-control" id="ph" name="ph" required>
+            </div>
+            <div class="form-group">
+                <label for="Hardness">Hardness</label>
+                <input type="number" step="0.01" class="form-control" id="Hardness" name="Hardness" required>
+            </div>
+            <div class="form-group">
+                <label for="Solids">Solids</label>
+                <input type="number" step="0.01" class="form-control" id="Solids" name="Solids" required>
+            </div>
+            <div class="form-group">
+                <label for="Chloramines">Chloramines</label>
+                <input type="number" step="0.01" class="form-control" id="Chloramines" name="Chloramines" required>
+            </div>
+            <div class="form-group">
+                <label for="Sulfate">Sulfate</label>
+                <input type="number" step="0.01" class="form-control" id="Sulfate" name="Sulfate" required>
+            </div>
+            <div class="form-group">
+                <label for="Conductivity">Conductivity</label>
+                <input type="number" step="0.01" class="form-control" id="Conductivity" name="Conductivity" required>
+            </div>
+            <div class="form-group">
+                <label for="Organic_carbon">Organic Carbon</label>
+                <input type="number" step="0.01" class="form-control" id="Organic_carbon" name="Organic_carbon" required>
+            </div>
+            <div class="form-group">
+                <label for="Trihalomethanes">Trihalomethanes</label>
+                <input type="number" step="0.01" class="form-control" id="Trihalomethanes" name="Trihalomethanes" required>
+            </div>
+            <div class="form-group">
+                <label for="Turbidity">Turbidity</label>
+                <input type="number" step="0.01" class="form-control" id="Turbidity" name="Turbidity" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#predictionForm').on('submit', function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: '/predict',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#result').html('<h3>Prediction: ' + response.predictions + '</h3>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Python
+*.pyc
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Data artifacts
+data/
+mlruns/
+mlfartifacts/
+
+# DVC files
+.dvc/
+.dvcignore
+
+# Ignore specific files in artifacts
+artifacts/features.csv
+artifacts/scaler.pkl
+artifacts/targets.csv
+
+# Ignore specific files in data
+data/water_potability.csv
+data/water_potability.csv.dvc
+
+# Additional rules from nested .gitignore
+data/*.csv  # If this rule was intended for files within 'data/'
