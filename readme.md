@@ -1,6 +1,6 @@
-Certainly! Here is a more polished and professional version of your README.md template in one continuous output:
 
 ```markdown
+
 # MLOps MLflow Project
 
 ## Project Overview
@@ -31,20 +31,27 @@ This project showcases the implementation of MLOps practices using MLflow. The r
 ├── test_experiment_mlp.py
 ├── test_experiment_xgb.py
 ├── test_mlops_rf.py
+
 ```
 
 ## Setup Instructions
 1. **Clone the repository:** 
     ```sh
+
     git clone <repository-url>
+
     ```
 2. **Navigate to the project directory:** 
     ```sh
+
     cd <project-directory>
+
     ```
 3. **Install the required dependencies:** 
     ```sh
+
     pip install -r requirements.txt
+
     ```
 
 ## Usage
@@ -60,7 +67,9 @@ The repository includes several scripts for running machine learning experiments
 
 To run an experiment, use the following command:
 ```sh
+
 python <script_name>.py
+
 ```
 
 ### Testing Experiments
@@ -71,15 +80,13 @@ Test scripts for the experiments are included:
 
 To run the tests, use the following command:
 ```sh
+
 python <test_script_name>.py
+
 ```
 
 ## Deployment
 The `app.py` script is provided for deploying the trained models.
 
-## Contributing
-Please ensure that your contributions adhere to the repository's guidelines. Fork the repository, create a new branch for your feature or bugfix, and submit a pull request.
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 ```
