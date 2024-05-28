@@ -90,4 +90,3 @@ python <test_script_name>.py
 The `app.py` script is provided for deploying the trained models.
 
 
-```
